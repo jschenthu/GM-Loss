@@ -37,7 +37,7 @@ random.seed(args.seed)
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
-
+os.makedirs('./checkpoint/', exist_ok=True)
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 start_epoch = 0  # start from epoch 0 or last checkpoint epoch
