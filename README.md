@@ -1,4 +1,4 @@
-This is the codebase of the GM loss on MNIST and CIFAR10 datasets.
+This is the codebase of the GM loss.
 
 # Environment settings
 The codebase is tested under the following environment settings:
@@ -6,6 +6,7 @@ The codebase is tested under the following environment settings:
 - python: 3.8.10
 - pytorch: 1.7.1
 - torchvision: 0.8.2
+- scikit-learn: 1.0.1
 
 # MNIST
 The code uses the network of 6 convolutional layers and a linear layer with 2-D / 100-D output.
@@ -58,3 +59,15 @@ In the default setting, $\alpha$ is set to be 0.3 and $\lambda$ is set to be 0.1
 The best accuracy is around 92.80% for GM loss.
 
 See Table 2 in the paper for reference.
+
+# Kernel Density
+The code implements the computation of the detection AUC-ROC score for semi white-box FGSM attack on a ResNet50 pretrained on the ImageNet dataset with Softmax+KD detection. 
+
+The code is tested on 4 Titan X gpus.
+
+To obtain the AUC-ROC score, simply run the following command. The ROC is around 74.9.
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 python ROC.py --data <ImageNet Dataset Folder>
+```
+
