@@ -9,6 +9,8 @@ from torch.optim.lr_scheduler import StepLR
 import numpy as np
 import matplotlib.pyplot as plt
 import random
+import os
+
 
 
 class LGM_Linear(nn.Module):
@@ -190,6 +192,9 @@ def main():
     parser.add_argument('--loss', type=str, default='gm', help='the type of loss')
     args = parser.parse_args()
     use_cuda = not args.no_cuda and torch.cuda.is_available()
+
+    os.makedirs('./checkpoint/', exist_ok=True)
+    
 
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed(args.seed)
