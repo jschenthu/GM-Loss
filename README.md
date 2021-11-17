@@ -67,7 +67,7 @@ The code is tested on 4 Titan X gpus.
 
 Please download the ImageNet training and validation sets and extract them to [ImageNet Dataset Folder].
 
-To obtain the AUC-ROC score, simply run the following command. 
+To obtain the AUC-ROC score, simply run the following command in the ./KD/ folder. 
 
 ```shell
 CUDA_VISIBLE_DEVICES=0,1,2,3 python ROC.py --data [ImageNet Dataset Folder]
