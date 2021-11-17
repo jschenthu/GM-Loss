@@ -61,11 +61,13 @@ The best accuracy is around 92.80% for GM loss.
 See Table 2 in the paper for reference.
 
 # Kernel Density
-The code implements the computation of the detection AUC-ROC score for semi white-box FGSM attack on a ResNet50 pretrained on the ImageNet dataset with Softmax+KD detection. 
+The code implements the computation of the detection AUC-ROC score for semi white-box FGSM attack on a ResNet50 pretrained on the ImageNet dataset with Softmax+KD detection.  The AUC-ROC score should be around 74%.
 
 The code is tested on 4 Titan X gpus.
 
-To obtain the AUC-ROC score, simply run the following command. The ROC is around 74.9.
+Please download the ImageNet training and validation sets and extract them to <ImageNet Dataset Folder>.
+
+To obtain the AUC-ROC score, simply run the following command. 
 
 ```shell
 CUDA_VISIBLE_DEVICES=0,1,2,3 python ROC.py --data <ImageNet Dataset Folder>
