@@ -1,0 +1,11 @@
+.git
+.idea
+*/__pycache__
+__pycache__
+__pycache__/
+*.pyc
+*.pth
+*.yml
+.vscode
+*.npy
+*.npz
