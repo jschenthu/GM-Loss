@@ -1,6 +1,6 @@
 # Joint Classification and Adversarial Detection
 
-This repository contains the PyTorch code and a fast implementation for our proposed **Mahalanobis distance Calibrated Adversarial Training (CCAT)**,
+This repository contains the PyTorch code and a fast implementation for our proposed **Mahalanobis distance Calibrated Adversarial Training (MCAT)**,
 which performs joint classification and detection against white-box adversarial attacks.
 
 ## Installation
