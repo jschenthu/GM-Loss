@@ -1,4 +1,5 @@
 This is the codebase of the GM loss.
+Implementation of our TPAMI paper "Shaping Deep Feature Space towards Gaussian Mixture for Visual Classification".
 
 # Environment settings
 The codebase is tested under the following environment settings:
